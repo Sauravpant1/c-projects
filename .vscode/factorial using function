@@ -1,0 +1,59 @@
+// #include<stdio.h>
+// void fibo(int);
+// int main()
+// {
+//     int n;
+//     printf("Enter the number of terms in the Fibonacci series: ");
+//     scanf("%d", &n);
+//     fibo(n);
+//     printf("%d",fibo(n));
+//     return 0;
+// }
+// void fibo(int n)
+// {
+   
+//     int a=1,b=1;
+//     printf("%d\n %d\n",a,b);
+//     for (int i = 3; i <= n; i++)
+//     {
+//         int c=a+b;
+//         a=b;
+//         b=c;
+//         printf("%d\n",c);
+//     }
+// }
+
+#include <stdio.h>
+
+void fibo(int n);
+
+int main()
+{
+    int n;
+    printf("Enter the number of terms in the Fibonacci series: ");
+    scanf("%d", &n);
+    fibo(n);
+    return 0;
+}
+
+void fibo(int n)
+{
+    if (n <= 0)
+    {
+        printf("Please enter a positive integer.\n");
+        return;
+    }
+
+    int a = 1, b = 1;
+
+    if (n >= 1) printf("%d\n", a);
+    if (n >= 2) printf("%d\n", b);
+
+    for (int i = 3; i <= n; i++)
+    {
+        int c = a + b;
+        printf("%d\n", c);
+        a = b;
+        b = c;
+    }
+}
