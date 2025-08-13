@@ -21,6 +21,7 @@ int main()
         if (input < 1 || input > 9)
         {
             printf("Invalid input! Please enter a number between 1 and 9.\n");
+            continue;
         }
         if (position[input] == 'X' || position[input] == 'O')
         {
@@ -35,7 +36,7 @@ int main()
         {
             printf("%d is Winner", player - 1);
         }
-        else if(result == 0)
+        else if (result == 0)
         {
             printf("draw");
         }
@@ -83,9 +84,9 @@ int winnercheck()
     else if (position[3] == position[5] && position[5] == position[7])
         return 1;
 
-    static count = 0;
+    int count = 0;
     // Check for draw condition
-    for (int i = 1; i < 9; i++)
+    for (int i = 1; i <= 9; i++)
     {
         if (position[i] == 'X' || position[i] == 'O')
         {
